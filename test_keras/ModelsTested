@@ -1,0 +1,103 @@
+>input_data optimizer:ARG:val:ARG:val:...:...
+- structure
+-> R^2 = test, train, valid; loss = train, valid
+**NOTES**
+
+>BR_MCF7_dragon SGD:LR:10**-4
+- Relu:2**2 - Drop(.2) 
+- Relu:2**2 - Drop(.2) 
+-> R^2 = -0.04,?,-0.04; loss = ?,0.330
+
+>BR_MCF7_ChemProbModel SGD:LR:10**-4 
+- Relu:2**2 - Drop(.2) 
+- Relu:2**2 - Drop(.2) 
+-> R^2 = 0.05, 0.07, 0.05; loss = 0.235, 0.233
+**NOTES**
+Underfits
+
+>BR_MCF7_ChemProbModel SGD:LR:10**-4 
+- Relu:2**2 - Drop(.2) 
+- Relu:2**2 - Drop(.2) 
+- Relu:2**2 - Drop(.2) 
+-> R^2 = 0.09, 0.10, 0.09; loss = 0.2325, 0.2230
+**NOTES**
+Underfits
+
+>BR_MCF7_ChemProbModel SGD:LR:10**-4 
+- Relu:2**2 - Drop(.2) 
+- Relu:2**2 - Drop(.2) 
+- Relu:2**2 - Drop(.2) 
+- Relu:2**2 - Drop(.2) 
+- Relu:2**2 - Drop(.2) 
+- Relu:2**2 - Drop(.2) 
+-> R^2 = 0.117, 0.113, 0.094; loss = 0.2320, 0.2225
+**NOTES**
+Underfits
+
+>BR_MCF7_ChemProbModel SGD:LR:10**-4 
+- Relu:2**2 
+- Relu:2**2 
+- Relu:2**2  
+- Relu:2**2  
+- Relu:2**2  
+- Relu:2**2 
+-> R^2 = 0.12, 0.14, 0.11; loss = 0.2180, 0.2106
+**NOTES**
+Slight overfitting
+How many dropouts cause major underfitting?  Does the placement (early in network vs late) make a difference?  
+Despite overfitting, can perform better!
+
+>BR_MCF7_noNormCounts SGD:LR:10**-4 
+- Relu:2**2 
+- Relu:2**2 
+- Relu:2**2  
+- Relu:2**2  
+- Relu:2**2  
+- Relu:2**2 
+-> R^2 = 0.084, 0.178, 0.0899; loss = 0.2062, 0.2242
+**NOTES**
+Overfitting 
+
+>BR_MCF7_noNormCounts SGD:LR:10**-4 
+- Relu:2**2 
+- Relu:2**2 
+- Relu:2**2 
+- Relu:2**2 
+- Relu:2**2  
+- Relu:2**2  
+- Relu:2**2  
+- Relu:2**2 
+- Relu:2**2  
+- Relu:2**2 
+-> R^2 = 0.107, 0.167, 0.084; loss = 0.2061, 0.2253
+**NOTES** 
+
+>BR_MCF7_ChemProbModel SGD:LR:10**-4 
+- Relu:2**2 
+- Relu:2**2 
+- Relu:2**2 
+- Relu:2**2 
+- Relu:2**2  
+- Relu:2**2  
+- Relu:2**2  
+- Relu:2**2 
+- Relu:2**2  
+- Relu:2**2 
+-> R^2 = 0.120, 0.134, 0.135; loss = 0.2061, 0.2253
+**NOTES** 
+
+>BR_MCF7_ChemProbModel SGD:LR:10**-4 
+- Relu:300
+- Relu:100
+- Relu:20
+ -> R^2 = 0.110, 0.129, 0.119; loss = 0.2142, 0.2169
+**NOTES** 
+
+>BR_MCF7_ChemProbModel SGD:LR:10**-4 
+- Relu:300
+- Relu:200
+- Relu:100
+- Relu:50
+- Relu:25
+ -> R^2 = 0.119, 0.131, 0.113; loss = 0.2141, 0.2180
+**NOTES** 
